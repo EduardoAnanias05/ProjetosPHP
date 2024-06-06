@@ -1,0 +1,298 @@
+
+
+/** SCROLL */
+$(document).ready(function () {
+    new ScrollUp('.js-scroll-up');
+});
+
+/** MENU */
+
+$(function() {
+    //let menu = $(".menu-transparent .navbar");
+    //let navbar = $(".menu-transparent .navbar .navbar-nav .nav-item > a");
+    let navbarDark = $(".navbar-dark .navbar-nav .nav-item > a");
+    //let logo = $(".menu-transparent .navbar .logo-senai");
+    //let acessibilidade = $(".menu-transparent .acessibilidade #shortcuts li > a");
+  
+    $(navbarDark).css("color", "#333333");
+  
+    //if (menu) {
+    //  var limit = 100;
+  
+    //  $(window).on("scroll", function() {
+    //    if (window.pageYOffset > limit) {
+    //      $(menu).addClass("bg-senai");
+    //      $(logo).attr("src", "/images/senai-inverse.svg");
+    //      $(".menu-transparent .menu-right a").css("color", "#fff");
+    //      $(".menu-transparent #topbar li a").css("color", "#fff");
+    //      $(acessibilidade).css("color", "#fff");
+    //      $(navbar).css("color", "#fff");
+    //    } else {
+    //      $(menu).removeClass("bg-senai");
+    //      $(logo).attr("src", "/images/senai.svg");
+    //      $(".menu-transparent .menu-right a").css("color", "#333333");
+    //      $(".menu-transparent #topbar li a").css("color", "#333333");
+    //      $(acessibilidade).css("color", "#000");
+    //      $(navbar).css("color", "#333333");
+    //    }
+    //  });
+    //};
+  
+    $("#dismiss, .overlay").on("click", function() {
+      $("#sidebar").removeClass("active");
+      $(".overlay").removeClass("active");
+    });
+
+    $("#btn-menu-mobile").on("click", function() {
+      $("#sidebar").addClass("active");
+      $(".overlay").addClass("active");
+      $(".collapse.in").toggleClass("in");
+      $("a[aria-expanded=true]").attr("aria-expanded", "false");
+    });
+  
+    $("#search-button").on("click", function () {
+        //var menu = $("#menu-site");
+        //if (menu.hasClass("open-search")) {
+        //    if ($("#search input[type='search']").val() != "") //realiza a pesquisa
+        //    {
+        //        $("#search").submit();
+        //    }
+        //    else {
+        //            menu.removeClass("open-search");
+        //        //$("#search input[type='search']").blur(false);
+        //        return false;
+        //    }
+        //} else {
+        //    menu.addClass("open-search");
+        //    $("#search input[type='search']").focus();
+        //}
+        SearchButton();
+        return false;
+    });
+    $("#search-button-2").on("click", function () {
+        SearchButton();
+        return false;
+    });
+
+    $("#s1").on("blur", function () {
+        SearchButton();
+        return false;
+    });
+});
+
+function SearchButton() {
+    var menu = $("#menu-site");
+    if (menu.hasClass("open-search")) {
+        if ($("#search input[type='search']").val() != "") //realiza a pesquisa
+        {
+            $("#search").submit();
+        }
+        else {
+            menu.removeClass("open-search");
+            //$("#search input[type='search']").blur(false);
+            return false;
+        }
+    } else {
+        menu.addClass("open-search");
+        $("#search input[type='search']").focus();
+    }
+
+}
+  
+  // Delay Menu Dropdown
+  
+  /* $('#dropdown-curos').mouseover(function(){
+    $('#dropdown-menu').slideDown('slow');
+  });
+  
+  $("#dropdown-curos").mouseleave(function () {
+    $("#dropdown-menu").slideUp('slow');
+  });
+   */
+  
+
+/** CAROUSEL */
+
+$(function () {
+    var percent = 0,
+        bar = $('.transition-timer-carousel-progress-bar'),
+        crsl = $('#destaques-carousel');
+
+    function progressBarCarousel() {
+        bar.css({
+            width: percent + '%'
+        });
+        percent = percent + 0.5;
+        if (percent > 100) {
+            percent = 0;
+            crsl.carousel('next');
+        }
+    }
+    crsl.carousel({
+        interval: false,
+        pause: true
+    }).on('slid.bs.carousel', function () {});
+    var barInterval = setInterval(progressBarCarousel, 30);
+    crsl.hover(
+        function () {
+            clearInterval(barInterval);
+        },
+        function () {
+            barInterval = setInterval(progressBarCarousel, 30);
+        })
+});
+
+
+function ObjectFitIt() {
+    $('img.objFit').each(function () {
+        var imgSrc = $(this).attr('src');
+        var imgHeight = $(this).height();
+
+
+        if ($(this).data('fit-type')) {
+            fitType = $(this).data('fit-type');
+        }
+        $(this).parent().prepend('<div style="height:' + imgHeight + 'px !important; background: transparent url(\'' + imgSrc + '\') no-repeat center center/cover"><div>');
+
+        $(this).remove();
+    });
+}
+
+if ('objectFit' in document.documentElement.style === false) {
+    ObjectFitIt();
+}
+
+function addContrast() {
+
+    if ($.cookie('highcontrast') == "undefined" || $.cookie('highcontrast') == "no") {
+        $.cookie('highcontrast', 'yes', {
+            expires: 7,
+            path: '/'
+        });
+        $("body").addClass("contrast");
+    } else {
+        $.cookie('highcontrast', 'yes', {
+            expires: 7,
+            path: '/'
+        });
+        $("body").addClass("contrast");
+    }
+    $("a.button-toggle-highcontrast").focus();
+};
+
+function removeContrast() {
+
+    $('body').removeClass('contrast');
+    $("a.button-toggle-highcontrast").focus();
+
+    if ($.cookie('highcontrast') == "yes") {
+        $.cookie("highcontrast", null, {
+            path: '/'
+        });
+    }
+};
+
+$(document).ready(function () {
+
+    $("#addContrast").click(function () {
+
+        if ($.cookie('highcontrast') == "yes") {
+            removeContrast();
+            $(this).html("Alto Contraste <span>6</span>")
+        } else {
+            addContrast();
+            $(this).html("Remover Alto Contraste <span>6</span>")
+        }
+
+        $('html, body').animate({
+            scrollTop: 0
+        }, 400, function () { $(this).focus(); });
+
+    });
+
+    // Check (onLoad) if the cookie is there and set the class if it is
+    if ($.cookie('highcontrast') == "yes") {
+        $("body").addClass("contrast");
+        $("#addContrast").html("Remover Alto Contraste <span>6</span>")
+    }
+});
+
+//Michel 08/12/21
+$("#menu-escola").click(function () {
+    $(".navbar-header").toggleClass("active");
+});
+
+//$(function () {
+//    $("li").on("click", function (e) {  // See here, i have our selector set to "li", so this jQuery object will grab all li tags on the page
+//        $(this).toggleClass("active");
+//    });
+//})
+
+
+
+//Compartilha página
+function Compartilhar(tituloCompart, textoCompart, urlCompart) {
+    navigator.share({
+        title: tituloCompart,
+        text: textoCompart,
+        url: urlCompart,
+    });
+}
+
+//exibe os icones de compartilhamento conforme plataforma
+function SetCompartilhar() {
+    const allMac = document.getElementsByClassName('isMac');
+    const allNotMac = document.getElementsByClassName('isNotMac');
+    if (VerificaNavegadorSOChromeMac()) {
+        for (j = 0; j < allMac.length; j++) {
+            allMac[j].style.display = "";
+        }
+    }
+    else {
+        for (j = 0; j < allNotMac.length; j++) {
+            allNotMac[j].style.display = "";
+        }
+    }
+}
+
+//identifica plataforma Mac em Chrome
+// 26/05/22 - verifica tambem linux
+function VerificaNavegadorSOChromeMac() {
+    var u_agent = navigator.userAgent;
+    var platform = 'Unknown';
+    var ub = "";
+
+    if (u_agent.toString().toUpperCase().indexOf('MAC') != -1 || u_agent.toString().toUpperCase().indexOf('LINUX') != -1) {
+        platform = 'Mac';
+    }
+    else if (u_agent.toString().toUpperCase().indexOf('WIN') != -1) {
+        platform = 'Windows';
+    }
+
+    if (u_agent.toString().toUpperCase().indexOf('CHROME') != -1) {
+        bname = 'Google Chrome';
+        ub = "Chrome";
+    }
+
+    //return true; //teste Macs
+
+    if (ub == "Chrome" && platform == 'Mac') {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function SetIE() {
+    if (VerificaNavegadorIE()) {
+        $("#IExplorer").html("<strong>ATENÇÃO!!! Esse site não funciona no Internet Explorer</strong>");
+        window.open("https://support.microsoft.com/pt-br/office/esse-site-n%c3%a3o-funciona-no-internet-explorer-8f5fc675-cd47-414c-9535-12821ddfc554?ui=pt-br&rs=pt-br&ad=br");
+
+    }
+   
+}
+
+function VerificaNavegadorIE() {
+    return (false || !!document.documentMode);
+}

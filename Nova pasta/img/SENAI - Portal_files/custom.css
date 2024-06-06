@@ -1,0 +1,1163 @@
+@import url('navegacao-portais.css');
+
+
+*:focus {
+  outline: none !important;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  /* Prevent scroll on narrow devices */
+}
+
+body {
+    min-height: 30rem;
+    padding-top: 8rem;
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #E6E6E6
+}
+
+/*
+.fixed-top {
+  margin-top: 30px;
+}
+    */
+.rounded {
+  border-radius: 1.25rem !important;
+}
+
+a {
+  color: #e30613;
+}
+
+
+a:hover {
+  color: #b91d32;
+}
+    
+.btn {
+    font-family: 'Montserrat', sans-serif; /*'Poppins', sans-serif;*/
+    font-weight: 600;
+    border-radius: 40px;
+}
+
+/* 13/12/21 Samanta */
+.btn-link, btn-link:focus, btn-link:active {
+    border:0px;
+    box-shadow:none;
+    border-radius: 0px;
+}
+.btn-primary {
+    background: #DB081A;
+    background: linear-gradient(90deg, rgba(192,13,13,1) 35%, rgba(227,6,19,1) 100%);
+    border-color: #DB081A;
+}
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary.active {
+        background-color: rgb(148, 11, 11);
+        background: linear-gradient(270deg, rgb(148, 11, 11) 35%, rgba(148, 11, 11) 100%);
+        border-color: rgb(148, 11, 11); /* Michel 08/12/21 */
+    }
+
+.btn-primary.disabled:hover,
+.btn-primary.disabled:focus,
+.btn-primary.disabled:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled]:hover,
+.btn-primary[disabled]:focus,
+.btn-primary[disabled]:active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary:hover,
+fieldset[disabled] .btn-primary:focus,
+fieldset[disabled] .btn-primary:active,
+fieldset[disabled] .btn-primary.active {
+  background-color: #DB081A;
+  border-color: #DB081A;
+}
+
+/* Michel 08/12/21*/
+    .btn-primary:not(:disabled):not(.disabled).active,
+    .btn-primary:not(:disabled):not(.disabled):active,
+    .show > .btn-primary.dropdown-toggle {
+        background: linear-gradient(90deg, rgb(176, 10, 10) 35%, rgb(209, 3, 17) 100%);
+        border-color: #DB081A;
+    }
+
+.bg-dark-red {
+  background-color: #b91d32;
+}
+
+.bg-gray {
+  background-color: #e5e9ea;
+}
+
+.bg-light-gray{
+    background-color: #f4f4f4;
+}
+
+.bg-dark-gray {
+  background-color: #1A1A1A;
+}
+
+.bg-senai {
+  background-color: #e30613 !important;
+}
+
+.body-content {
+  margin-top: 60px;
+}
+
+.material-icons-sub {
+  vertical-align: sub;
+  line-height: 0;
+}
+
+.material-icons-middle {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.senai-page {
+  line-height: 28px;
+  width: 100%;
+  min-height: inherit;
+}
+
+.navbar-brand>img {
+  min-width: 100px;
+  margin-right: 10px;
+}
+
+
+#escola {
+  background:none
+}
+
+/* MENU ESCOLA */
+
+
+
+.navbar-escola {
+    padding: 0;
+    position: absolute; /* Michel 08/12/21*/
+    width: 100%; /* Michel 08/12/21*/
+    z-index: 99; /* Michel 08/12/21*/
+}
+
+.navbar-header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 5px 0;
+  text-align: center;
+  background-color: #C00D0D;
+}
+
+.navbar-header.active {
+  background-color: #666666;
+}
+
+.navbar-header button {
+  width: 100%;
+  padding: 10px 5px;
+}
+
+.btn-menu-escola { 
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;  
+}
+
+.navbar-header .btn-menu-escola:before {
+  font-family: 'FontAwesome';
+  content: "\f107";
+  float: right; 
+  transition: all 0.5s;
+  margin-left: 5px;
+}
+.navbar-header.active .btn-menu-escola:before {
+ -webkit-transform: rotate(180deg);
+ -moz-transform: rotate(180deg);
+ transform: rotate(180deg);
+} 
+
+.nav-escola-item {
+  font-size: 14px;
+  width: 100%;
+  padding: 0px;
+}
+
+/*Michel 08/12/21 */
+    .nav-escola-item .nav-link {
+        color: #ffffff;
+        margin-left: 14px;
+    }
+
+.nav-escola-item:last-child{
+  border-radius: 0px 0px 6px 6px;
+}
+
+.nav-escola-item:hover,
+.nav-escola-item:focus,
+.nav-escola-item:active,
+.nav-escola-item.active {
+  background-color: #c20717 !important;
+  border-color: #aa0614 !important;
+}
+
+    /*Michel 08/12/21 Inicio */
+
+    .nav-escola-item.active {
+        background-color: #c20717 !important;
+    }
+
+ul.sub-menu {
+    background-color: #c20717 !important;
+}
+
+    ul.sub-menu li {
+        background-color: #990000 !important;
+    }
+
+    ul.sub-menu.show li:hover {
+        background-color: rgba(0,0,0,.35) !important;
+    }
+
+.sub-menu {
+    margin: 0;
+    padding: 0;
+}
+
+    .sub-menu li {
+        list-style: none;
+        padding-left: 14px;
+    }
+
+
+
+.nav-escola-item.plus:before {
+    color: #fff;
+    margin: 10px 10px 0 0;
+    font-family: 'FontAwesome';
+    content: "\f196";
+    float: right;
+}
+
+.nav-escola-item.plus.active:before {
+    content: "\f147";
+}
+/*Michel 08/12/21 fim */
+
+/* SOCIAL MEDIA NOME E FOTO ESCOLA */
+
+ section.escola {
+   padding-bottom: 0;
+ }
+
+.card-img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img-wrap img {
+  transition: transform .25s;
+  width: 100%;
+}
+
+.card-img-wrap:hover img {
+  transform: scale(1.010);
+}
+
+.card-img-maior {
+  height: 330px;
+  object-fit: cover;
+}
+
+.social-media {
+  padding: 25px 0;
+  margin: 0 auto;
+  text-align: center;
+  border-top: 1px solid #CCCCCC;
+}
+
+.social-media ul {
+  margin: 0;
+  padding: 0;
+}
+
+.social-media li {
+  display: inline-block;
+  padding: 0 10px;
+  list-style: none;
+}
+
+.social-media li a {
+  color: #999999;
+}
+
+.social-media li a:hover,
+.social-media li a:active,
+.social-media li a.active {
+  color: #cc0000;
+}
+
+
+
+.nome-cidade {
+    display: block;
+    padding: 20px 0;
+    margin: 20px 0 0 0;
+    font-family: 'Montserrat', sans-serif; /*'Poppins', sans-serif;*/
+    font-weight: 300;
+    text-align: center;
+}
+
+.nome-escola h1 {
+    font-family: 'Montserrat', sans-serif; /*'Poppins', sans-serif;*/
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.conheca-escola {
+  margin: -20px auto;
+  text-align: center;
+}
+
+.conheca-escola a {
+  padding: 10px 25px;
+  font-size: 14px;
+  transition: all 1s ease 0s;
+}
+
+
+
+/* DESTAQUES */
+#destaques {
+  padding: 50px 0 75px;
+  background: none
+}
+
+    #destaques h2 {
+        font-family: 'Montserrat', sans-serif; /*'Poppins', sans-serif;*/
+        font-weight: 800;
+        color: #1A1A1A;
+        text-transform: uppercase;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+#destaques hr {
+  width: 10%;
+  background: #f00;
+}
+
+#destaques .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  border: none;
+  opacity: 1;
+}
+#destaques .carousel-indicators li.active {
+  background-color: red;
+}
+
+#destaques .titulo:before {
+  position: absolute;
+  width: 50px;
+  height: 22px;  
+  content: "";
+  background: url(../images/points-tit-left.png) center no-repeat;
+  background-size: contain;
+  top:10px;
+  left:130px;
+}
+
+#destaques .titulo:after {
+  position: absolute;
+  width: 50px;
+  height: 22px;  
+  content: "";
+  background: url(../images/points-tit-left.png) center no-repeat;
+  background-size: contain;
+  top:10px;
+  right:130px;
+  transform: rotateX(0deg) rotateY(180deg);
+  transform-style: preserve-3d;
+}
+ 
+
+.points01 {
+  display: block;
+  position:absolute;
+  width: 4px;
+  height: 100px;
+  left: 150px;
+  top: 100px;
+  background: url(../images/points01.png) no-repeat;
+  background-size: contain;
+  z-index: 9; 
+}
+
+.points02 {
+  display: block;
+  position:absolute;
+  width: 130px;
+  height: 100px;
+  top:0;
+  right: 0;
+  background: url(../images/points02.png) no-repeat;
+  background-size: contain;
+  z-index: 9;
+}
+
+.carousel-inner img {
+    border-radius: 7px;
+    justify-content: center;
+    height: auto;
+}
+
+/* SERVICOS */
+#servicos-home {
+  padding: 60px 0;
+  background-color: #E6E6E6;
+}
+
+#servicos-home .link-servico {
+  color: inherit;
+}
+
+#servicos-home .link-servico:hover {
+  text-decoration: none;
+}
+#servicos-home .link-servico:hover .shadow {
+  box-shadow: 0 .15rem .15rem rgba(0,0,0,.1)!important;
+}
+
+#servicos-home .card {
+  padding: 30px;
+  margin: 15px 0;  
+}
+
+#servicos-home .card-body {
+  padding: 0 0 0 25px;
+  text-align: left;
+}
+
+#servicos-home h5
+ {
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  height: 100%;
+  min-height: 5rem; 
+}
+
+#servicos-home img.ico-cod-barras {
+  height: 55px;
+  margin-top: 10px;
+}
+
+#servicos-home img.ico-biblioteca {
+  height: 50px;
+  margin-top: 15px;
+}
+
+#servicos-home img.ico-vagas-emprego {
+  height: 58px;
+  margin-top: 10px;
+}
+
+
+/* NOTICIAS HOME */
+#noticias-home {
+  padding: 50px 0 75px;
+  background: #F2F2F2
+}
+
+    #noticias-home h2 {
+        font-family: 'Montserrat', sans-serif; /*'Poppins', sans-serif;*/
+        font-weight: 800;
+        color: #1A1A1A;
+        text-transform: uppercase;
+        margin: 0 auto;
+        text-align: center;
+    }
+ 
+#noticias-home hr {
+  width: 10%;
+  background: #f00;
+}
+
+#noticias-home .titulo:before {
+  position: absolute;
+  width: 50px;
+  height: 22px;  
+  content: "";
+  background: url(../images/points-tit-left.png) center no-repeat;
+  background-size: contain;
+  top:10px;
+  left: calc(50% - 150px);
+}
+
+#noticias-home .titulo:after {
+  position: absolute;
+  width: 50px;
+  height: 22px;  
+  content: "";
+  background: url(../images/points-tit-left.png) center no-repeat;
+  background-size: contain;
+  top:10px;
+  right: calc(50% - 150px);
+  transform: rotateX(0deg) rotateY(180deg);
+  transform-style: preserve-3d;
+}
+
+#noticias-home h3 {
+  font-weight: 700;
+}
+#noticias-home .carousel-indicators {
+  top: 280px;
+  bottom: 0;
+}
+#noticias-home .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: #999999;
+  opacity: 1;
+}
+#noticias-home .carousel-indicators li.active {
+  background-color: red;
+}
+
+
+#noticias-home .card-img-maior {
+  height: 300px;
+  object-fit: cover;
+}
+
+#noticias-home .conteudo-ntc{
+  padding: 40px 20px;
+}
+
+#noticias-home .conteudo-ntc .link-conteudo-ntc {
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+
+/* HORARIO */
+
+#horario {
+  padding: 50px 0;
+}
+
+    #horario h2 {
+        margin: 0 auto;
+        padding-bottom: 30px;
+        font-family: 'Montserrat', sans-serif; /*'Poppins', sans-serif;*/
+        font-weight: 800;
+        color: #1A1A1A;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+#horario hr {
+  width: 10%;
+  background: #f00;
+}
+
+#horario ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+#horario li::before{
+  font-size: 20px;
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block; 
+  width: .75em;
+  
+}
+
+.card-titulo-maior {
+    padding: 5px;
+    margin-right: -13px;
+    margin-bottom: -8px !important;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: inherit;
+}
+/* ##################
+RESPONSIVE 
+#####################*/
+@media (max-width: 576px) {
+    .npu-col-3 {
+        text-align: right;
+    }
+}
+
+@media (min-width: 768px) {
+/*    body {
+        padding-top: 9rem;
+    }
+*/  .navbar-brand>img {
+    width: 145px;
+    z-index: 1001;
+    position: relative;
+  }
+
+  /* Michel 08/12/21 - 13-12/21 */
+    #escola {
+        min-height: 440px;
+        background-image: url('../images/bg-home.jpg');
+        background-position-x: center;
+        background-position-y: -750px;
+        background-size: normal;
+        background-repeat: repeat-x
+    }
+
+    /* Michel 08/12/21 */
+    .navbar-escola {
+        position: absolute;
+        z-index: 99;
+        padding: 0;
+    }
+
+  .card-img-maior {
+    height: 430px;
+    object-fit: cover;
+  }
+
+  .social-media {
+    padding: 25px 0;
+    margin: 0 auto;
+    text-align: left;
+    border-bottom: 1px solid #CCCCCC;
+  }
+
+    .nome-cidade {
+        display: block;
+        padding: 20px 0;
+        margin: 0;
+        font-family: 'Montserrat', sans-serif; /*'Poppins', sans-serif;*/
+        font-weight: 300;
+        text-align: left;
+    }
+
+    .nome-escola h1 {
+        font-family: 'Montserrat', sans-serif; /*'Poppins', sans-serif;*/
+        font-weight: 800;
+        text-align: left;
+    }
+
+  .conheca-escola {
+    margin: 10px auto 0;
+    text-align: left;
+  }
+  
+  .conheca-escola a {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+  
+  #noticias-home .titulo:before {
+    top:10px;
+    left: calc(50% - 150px)
+  }
+  
+  #noticias-home .titulo:after {
+    top:10px;
+    right: calc(50% - 150px)
+  }
+
+  #noticias-home .carousel-indicators {
+    bottom: -10px;
+  }
+
+  #noticias-home .conteudo-ntc{
+    padding: 0px;
+  }
+
+  #noticias-home .carousel-indicators {
+    top: 320px;
+    bottom: 0;
+  }
+
+  #noticias-home .conteudo-ntc .link-conteudo-ntc {
+    text-align: left;
+  }
+    .card-titulo-maior {
+        padding: 5px;
+        margin-right: -13px;
+        margin-bottom: -8px !important;
+        line-height: 1;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: inherit;
+    }
+ } /*fim 768px */
+ 
+@media (min-width: 1024px) {
+/*    body {
+        padding-top: 10.5rem;
+    }
+*/    /* MENU */
+  .navbar-header {
+    display: none; 
+  } 
+
+
+  #destaques {
+    padding: 50px 0 75px;
+    background: #1A1A1A;
+  }
+
+    #destaques h2 {
+        font-family: 'Montserrat', sans-serif; /*'Poppins', sans-serif;*/
+        font-weight: 800;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+  #destaques .titulo:before, #destaques .titulo:after {
+    display: none; 
+  }
+
+  #destaques img {
+    border-radius: 9px;
+  }
+
+  #servicos-home img.ico-cod-barras {
+    height: 55px;
+    margin-top: 10px;
+  }
+
+
+    .card-titulo-maior {
+        padding: 5px;
+        margin-right: -13px;
+        margin-bottom: -8px !important;
+        line-height: 1;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: inherit;
+    }
+
+} /*fim 1024px */
+
+/* ALTO CONTRASTE */
+.contrast,
+.contrast nav,
+.contrast div,
+.contrast li,
+.contrast ul,
+.contrast ol,
+.contrast header,
+.contrast footer,
+.contrast section,
+.contrast main,
+.contrast aside,
+.contrast article,
+.contrast input {
+    background-color: black !important;
+    color: white !important;
+}
+
+    .contrast h1,
+    .contrast h2,
+    .contrast h3,
+    .contrast h4,
+    .contrast h5,
+    .contrast h6,
+    .contrast p,
+    .contrast label,
+    .contrast strong,
+    .contrast em,
+    .contrast cite,
+    .contrast q,
+    .contrast i,
+    .contrast b,
+    .contrast u,
+    .contrast span {
+        color: white !important;
+        background-color: transparent !important;
+    }
+
+    .contrast a {
+        color: white !important;
+        text-decoration: underline;
+    }
+
+
+    /* Samanta Pascoal 09/05/22 */
+#search-button, #btn-menu-mobile, #login, #iconefb, #iconetw, #iconeyt, #iconeli, #iconeinsta {
+    text-decoration: none !important;
+}
+    .contrast .nav-link {
+        color: yellow !important;
+        text-decoration: underline !important;
+        text-decoration-color: yellow !important;
+    }
+
+ol.carousel-indicators{
+    background-color: transparent !important;
+}
+.contrast .card {
+    border: 1px solid white;
+}
+.contrast .nav-link.bg-senai {
+    background-color: white !important;
+    color: black !important;
+    text-decoration-color: black !important;
+}
+.contrast .panel-links b, .contrast .btn-filtro {
+    color: yellow !important;
+    text-decoration: underline !important;
+    text-decoration-color: yellow !important;
+}
+
+
+    .contrast .btn, .contrast .btn-turmas, .contrast .btn-verunidades {
+        background: black !important;
+        color: white !important;
+        text-decoration: underline !important;
+        text-decoration-color: white !important;
+        border-color: white !important;
+    }
+    .contrast .btn:hover, .contrast .btn-turmas:hover, .contrast .btn-verunidades:hover {
+        background: white !important;
+        color: black !important;
+        border: none !important;
+        text-decoration: underline !important;
+        text-decoration-color: black !important;
+    }
+
+    .contrast .table{
+        color: white !important;
+    }
+
+.contrast .breadcrumb .breadcrumb-item > * {
+    color: white !important;
+    background-color: transparent !important;
+    border-color: white !important;
+    text-decoration: underline !important;
+    text-decoration-color: white !important;
+}
+.contrast .breadcrumb .breadcrumb-item.active > * {
+    color: white !important;
+    background-color: transparent !important;
+    border-color:white !important;
+    text-decoration: none !important;
+}
+.contrast .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: white !important;
+}
+
+.contrast ::placeholder{
+    color: white !important;
+}
+    .contrast .page-item.active .page-link {
+        color: black !important;
+        text-decoration-color: black !important;
+        background-color: white !important;
+        border-color: black !important;
+        
+    }
+    .contrast .page-link {
+        color: white !important;
+        text-decoration-color: white !important;
+        background-color: transparent !important;
+        border-color: white !important;
+        border: 1px solid !important;
+    }
+    /*  */
+    /* Samanta Pascoal 13/03/22*/
+    .contrast .nav-link.active {
+        color: white !important;
+        background-color: black !important;
+    }
+    /* */
+
+.contrast button, .contrast input[type=button], .contrast input[type=reset], .contrast input[type=submit] {
+    background: black !important;
+    color: yellow !important;
+    border: none !important;
+    text-decoration: underline !important;
+    text-decoration-color: yellow !important;
+}
+
+    .contrast input[type=text],
+    .contrast input[type=password],
+    .contrast input[type=url],
+    .contrast input[type=search],
+    .contrast input[type=email],
+    .contrast input[type=tel],
+    .contrast input[type=date],
+    .contrast input[type=month],
+    .contrast input[type=week],
+    .contrast input[type=datetime],
+    .contrast input[type=datetime-local],
+    .contrast textarea,
+    .contrast input[type=number] {
+        background: black !important;
+        border: 1px solid white !important;
+        color: white !important;
+    }
+
+    .contrast ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: white;
+    }
+
+    .contrast ::-moz-placeholder { /* Firefox 19+ */
+        color: white;
+    }
+
+    .contrast :-ms-input-placeholder { /* IE 10+ */
+        color: white;
+    }
+
+    .contrast :-moz-placeholder { /* Firefox 18- */
+        color: white;
+    }
+
+    .contrast footer div {
+        background-image: none !important;
+    }
+
+    .contrast .navbar-default {
+        border: transparent;
+    }
+
+    .contrast .navigation2 > .navbar-default {
+        background-color: black !important;
+        border-color: transparent !important;
+        border-bottom: 1px solid white !important
+    }
+
+    .contrast .fa {
+        color: white;
+    }
+
+    .contrast hr {
+        border-color: white !important;
+    }
+
+    .contrast img {
+        filter: grayscale(30%) contrast(150%);
+        background-image: url()
+    }
+
+    .contrast :focus {
+        outline: auto 0px #e30513;
+        outline: -webkit-focus-ring-color auto 3px yellow
+    }
+
+    .contrast .bg {
+        background-color: transparent !important;
+    }
+
+    .contrast .card-img-overlay {
+        background-color: transparent !important;
+    }
+
+    .contrast .carousel-indicators .active {
+        background-color: yellow !important;
+    }
+
+    .contrast .carousel-indicators li {
+        background-color: white !important;
+    }
+/* FIM ALTO CONTRASTE */
+
+/* INICIO PATRONOS */
+
+section.patrono {
+    padding-bottom: 0;
+}
+
+.patronobtn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border-radius: 40px;
+}
+
+.patronocard-img-wrap {
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+    background-color: #E6E6E6 !important;
+    border: 8px white solid;
+}
+
+    .patronocard-img-wrap img {
+        transition: transform .25s;
+        width: 100%;
+    }
+
+    .patronocard-img-wrap:hover img {
+        transform: scale(1.010);
+    }
+
+.patronocard-img-maior {
+    height: 170px;
+    object-fit: cover;
+}
+
+.patronocard-img-menor {
+    height: 150px;
+    object-fit: cover;
+}
+.patrono-img-menor {
+    height: 100px;
+}
+
+.nome-patrono h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+.nome-patrono h2 {
+    display: block;
+    padding: 20px 0 10px 0;
+    margin: 20px 0 10px 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: #e30513;
+    line-height: 1;
+    font-size: large;
+}
+
+.descricao-patrono {
+    display: block;
+    padding: 0 0;
+    margin: 0 0 0 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: black;
+}
+
+#patrono {
+    min-height: 100px;
+}
+
+
+/* ##################
+            RESPONSIVE
+        #####################*/
+@media (min-width: 768px) {
+    #patrono {
+        min-height: 100px;
+        background-image: url(../images/bg-patrono2.jpg);
+        background-position-x: center;
+        background-position-y: -200px;
+        background-size: normal;
+        background-repeat: repeat-x;
+        color: white;
+        padding-top: 10px;
+    }
+
+
+    .nome-patrono h1 {
+        text-align: left;
+    }
+
+    .nome-patrono h2 {
+        margin: 0;
+        text-align: left;
+    }
+
+    .descricao-patrono {
+        text-align: left;
+    }
+
+    .patronocard-img-menor {
+        height: 200px;
+    }
+    .patrono-img-menor {
+        height: 135px;
+    }
+}
+
+@media (min-width: 982px) {
+    #patrono {
+        min-height: 100px;
+        background-image: url(../images/bg-patrono.jpg); background-position-x: center;
+        background-position-y: -200px;
+        background-size: normal;
+        background-repeat: repeat-x;
+        color: white;
+    }
+
+    .nome-patrono h1 {
+        text-align: left;
+    }
+
+    .nome-patrono h2 {
+        margin: 0;
+        text-align: left;
+    }
+
+    .descricao-patrono {
+        text-align: left;
+    }
+
+    #btnVoltar {
+        padding-top: 30px;
+    }
+    .patrono-img-menor {
+        height: 135px;
+    }
+}
+
+/* FIM PATRONOS */
+
+.truncate-line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    /*width: 250px;*/
+    overflow: hidden;
+}
+
+/* acessibilidade VLibras*/
+.vw-links {
+    z-index: 1100 !important;
+}
+
+/* Gabriel 08/05/23 */
+@media (min-width: 768px) {
+    #conteudo {
+        padding-top: 0.5rem;
+    }
+}
+
+    .nav-tabs .nav-link.active {
+        color: #495057;
+        background-color: #e8e8e8;
+        border-radius: 15px 15px 0 0;
+    }
+

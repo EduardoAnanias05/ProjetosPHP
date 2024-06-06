@@ -1,34 +1,69 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-}
-.container {
-    margin: 0 auto;
-} 
 
-.card{ 
-    margin: 10px;  
-    width: 200px;
-} 
+
+}
+
+.container {
+ 
+
+}
+
+.row2 {   
+    position: relative;
+    left: 10vh;
+    margin-top: 20px;
+
+}
+
+.card {
+
+    width: 350px;
+}
 
 .nav2 {
     background-color: #181818;
-    color: #fff;
     display: flex;
     justify-content: space-around;
-    padding: 10px 0;
+    height: 7px;
 }
 
-.nav2 a {
-    color: #fff;
-    text-decoration: none;
-} 
+
 
 #logo {
     height: 50px;
-} 
-
-.nav-item{ 
-    margin-left: 80px; 
 }
 
+.nav-item {
+    margin-left: 80px;
+}
+
+.carousel  {   
+
+    border-radius: 20px;
+    margin-top: 20px;
+    height: 600px;
+} 
+
+.carousel img{
+    height: 600px;
+    border-radius: 20px;
+
+}
+
+.card-img-top {
+    margin-bottom: 5px; 
+    height: 100px; 
+    width: 100px;
+}
+
+.navbar .nav-link {
+    color: #ffffff !important;
+    /* Cor do texto branca */
+}
+
+.navbar .nav-link:hover {
+    color: #ffcccc !important;
+    /* Cor do texto ao passar o mouse */
+}
